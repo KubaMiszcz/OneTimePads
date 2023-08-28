@@ -15,16 +15,19 @@ export class MainComponent implements OnInit{
   }
 
   ngOnInit(): void {
-      this.message="msg: mission tank 123 start"
+      this.message="mission 226 tank A-398 start 34UEA12345 67892"
       this.convertedMessage = this.appService.convertMessage(this.message);
-      this.deconvertedMessage = this.appService.deconvertMessage(this.convertedMessage);
+
+     this.convertedMessage= this.convertedMessage.replace(/(.{5})/g,"$1 ")
+
+           this.deconvertedMessage = this.appService.deconvertMessage(this.convertedMessage.replaceAll(' ',''));
     }
     
     convertMessage(){
       this.convertedMessage = this.appService.convertMessage(this.message);
   }
     deconvertMessage(){
-      this.convertedMessage = this.appService.deconvertMessage(this.message);
+      this.deconvertedMessage = this.appService.deconvertMessage(this.convertedMessage);
   }
 
 
