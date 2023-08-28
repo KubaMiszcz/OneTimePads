@@ -1,6 +1,5 @@
 export enum CONVERT_MODES {
-  LETTERS,
-  DIGITS,
-  CODES,
+  LETTERS = 'LETTERS',
+  DIGITS = 'DIGITS',
+  CODE = 'CODE',
 }
-  

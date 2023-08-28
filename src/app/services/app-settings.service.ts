@@ -59,7 +59,7 @@ export const CONVERSIONTABLES: IConversionTable[] = [
 
       { char: 'CR', code: '80' },
       { char: 'LETTERS', code: '81' },
-      { char: 'FIGURES', code: '82' },
+      { char: 'DIGITS', code: '82' },
       { char: ' ', code: '83' },
       { char: 'CODE', code: '84' },
       { char: 'RPT', code: '85' },

@@ -15,7 +15,7 @@ export class MainComponent implements OnInit{
   }
 
   ngOnInit(): void {
-      this.message="test message 123"
+      this.message="message 123"
       this.convertedMessage = this.appService.convertMessage(this.message);
       this.deconvertedMessage = this.appService.deconvertMessage(this.convertedMessage);
     }
