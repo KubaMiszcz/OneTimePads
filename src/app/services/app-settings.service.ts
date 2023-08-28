@@ -1,20 +1,27 @@
-import { Injectable } from '@angular/core';
-import { ICharCode, IConversionTable } from '../models/conversion-table';
+import { Injectable } from "@angular/core";
+import { ICodeBook, IConversionTable } from "../models/conversion-table";
 
 @Injectable({
   providedIn: 'root',
 })
 export class AppSettingsService {
   conversionTables: IConversionTable[] = [];
+  codeBooks: ICodeBook[] = [];
 
   constructor() {
-    this.conversionTables.push(CONVERSIONTABLES[0]);
+    this.conversionTables = CONVERSIONTABLES;
+    this.codeBooks = CODEBOOKS;
   }
 }
 
-export const WORD_CODESxxxx: ICharCode[] = [ //how to name it
-  { char: 'MISSION', code: '123' },
-  { char: 'TANK', code: '124' },
+export const CODEBOOKS: ICodeBook[] = [
+  {
+    name: 'CodeBook',
+    values: [
+      { word: 'MISSION', code: '226' },
+      { word: 'TANK', code: '398' },
+    ],
+  },
 ];
 
 export const CONVERSIONTABLES: IConversionTable[] = [
