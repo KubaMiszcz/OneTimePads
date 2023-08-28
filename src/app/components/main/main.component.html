@@ -3,13 +3,25 @@
     
     <div class="input-group  mb-3 ">
         <div class=" input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">message ({{message.length}})</span>
+          <span class="input-group-text" id="basic-addon1">original message ({{message.length}})</span>
         </div>
         <input [(ngModel)]="message" type="text" class="form-control" [value]="message" placeholder="message" aria-label="message" aria-describedby="basic-addon1">
       </div>
 
-      <p>converted message{{convertedMessage.length}}: {{convertedMessage}}</p>
-      <p>deconverted message{{deconvertedMessage.length}}: {{deconvertedMessage}}</p>
+      <div class="input-group  mb-3 ">
+        <div class=" input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">converted message ({{getConvertedMessageLength()}})</span>
+        </div>
+        <input [(ngModel)]="convertedMessage" type="text" class="form-control" [value]="convertedMessage" placeholder="message" aria-label="message" aria-describedby="basic-addon1">
+      </div>
+
+      <div class="input-group  mb-3 ">
+        <div class=" input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">deconverted Message ({{deconvertedMessage.length}})</span>
+        </div>
+        <input [(ngModel)]="deconvertedMessage" type="text" class="form-control" [value]="deconvertedMessage" placeholder="message" aria-label="message" aria-describedby="basic-addon1">
+      </div>
+
       <button type="button" class="btn btn-primary me-2"(click)="convertMessage()">convert</button>
       <button type="button" class="btn btn-primary"(click)="deconvertMessage()">deconvert</button>
 </div>
